@@ -6,10 +6,10 @@ cask 'deadbeef' do
   name 'DeaDBeeF'
   homepage 'https://deadbeef.sourceforge.io/'
 
-  app 'deadbeef.app'
+  app 'DeaDBeeF.app'
 
   zap trash: [
-               '~/Library/Preferences/com.deadbeef.deadbeef.plist',
+               '~/Library/Preferences/com.deadbeef.DeaDBeeF.plist',
                '~/Library/Preferences/deadbeef',
                '~/Library/Saved Application State/com.deadbeef.deadbeef.savedState',
              ]
