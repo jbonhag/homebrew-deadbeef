@@ -3,6 +3,8 @@ class DeadbeefVfsRar < Formula
   homepage "https://github.com/DeaDBeeF-Player/vfs_rar"
   head "https://github.com/DeaDBeeF-Player/vfs_rar.git"
 
+  depends_on :deadbeef
+
   def install
     curl "-O", "https://www.rarlab.com/rar/unrarsrc-5.9.2.tar.gz"
     system "tar", "-xf", "unrarsrc-5.9.2.tar.gz"
