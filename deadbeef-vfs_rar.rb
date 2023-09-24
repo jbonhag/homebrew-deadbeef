@@ -1,7 +1,7 @@
 class DeadbeefVfsRar < Formula
   desc "RAR vfs plugin for DeaDBeef player"
   homepage "https://github.com/DeaDBeeF-Player/vfs_rar"
-  head "https://github.com/DeaDBeeF-Player/vfs_rar.git"
+  head "https://github.com/DeaDBeeF-Player/vfs_rar.git", branch: "master"
 
   def install
     unless File.file?("/Applications/DeaDBeeF.app/Contents/Headers/deadbeef/deadbeef.h")
