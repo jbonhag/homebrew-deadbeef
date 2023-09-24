@@ -4,11 +4,11 @@ class DeadbeefVfsRar < Formula
   head "https://github.com/DeaDBeeF-Player/vfs_rar.git"
 
   def install
-    if !File.file?("/Applications/DeaDBeeF.app/Contents/Headers/deadbeef/deadbeef.h")
+    unless File.file?("/Applications/DeaDBeeF.app/Contents/Headers/deadbeef/deadbeef.h")
       odie "DeaDBeeF headers are required to build plugins. Please install with `brew cask install deadbeef`."
     end
 
-    curl "-O", "https://www.rarlab.com/rar/unrarsrc-5.9.2.tar.gz"
+    system "curl", "-O", "https://www.rarlab.com/rar/unrarsrc-5.9.2.tar.gz"
     system "tar", "-xf", "unrarsrc-5.9.2.tar.gz"
 
     ENV.append "CXXFLAGS", "-I/Applications/DeaDBeeF.app/Contents/Headers"
